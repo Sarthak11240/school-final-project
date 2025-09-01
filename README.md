@@ -1,24 +1,22 @@
-# School Project (Next.js + Cloudinary + MySQL)
+# School Project (Next.js + MySQL)
 
 This project stores school data (name, address, city, state, contact, email, image). Images are uploaded to Cloudinary so the app works both locally and when hosted (Vercel/Netlify). Database can be local MySQL or a remote provider (PlanetScale).
 
 ## Setup (local)
 
-1. Copy `.env.local.example` to `.env.local` and fill values.
-
-2. Install dependencies:
+1. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Ensure MySQL is running and create DB (if not using remote DATABASE_URL):
+2. Ensure MySQL is running and create DB (if not using remote DATABASE_URL):
 ```sql
 # optional - lib/db will attempt to bootstrap but you can create manually
 CREATE DATABASE schoolDB;
 USE schoolDB;
 ```
 
-4. Run locally:
+3. Run locally:
 ```bash
 npm run dev
 ```
