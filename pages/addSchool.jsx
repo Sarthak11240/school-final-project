@@ -53,10 +53,19 @@ export default function AddSchool() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold mb-1">Contact</label>
-            <input {...register('contact', { required: true, pattern: /^[0-9]{7,15}$/ })} className="input p-2 w-full border rounded" />
-            {errors.contact && <p className="text-red-600 text-sm">Invalid contact</p>}
-          </div>
+  <label className="block text-sm font-semibold mb-1">Contact</label>
+  <input
+    type="tel"
+    {...register('contact', { required: true, pattern: /^[0-9]{7,15}$/ })}
+    maxLength={15}
+    className="input p-2 w-full border rounded"
+  />
+  {errors.contact && (
+    <p className="text-red-600 text-sm">Contact must be 7–15 digits</p>
+  )}
+</div>
+
+
 
           <div>
             <label className="block text-sm font-semibold mb-1">State</label>
